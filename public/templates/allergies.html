@@ -1,0 +1,47 @@
+<div class="allergiesContainer">
+	<div class="allergiesPageTittle">Allergies</div>
+	<div class="nameTitle" ng-bind="nameTitle"></div>
+	<div class="inputContainer">
+		<div class="input il">
+			<div>
+				<span>Allergic to:</span><input type="text" ng-model="name" placeholder="Ex: Peanuts">
+			</div></br>
+			<div>
+				<span>Reaction</span><input ng-model="reaction" placeholder="Ex: Lack of breath">
+			</div> 
+		</div>
+		<div class="buttonContainer il">
+			<button class="button saveButtonAllergy" ng-click="saveNewAllergy()">Save</button>
+		</div>
+	</div>
+	<div class="allergiesListContainer">
+
+		<div class="editableView" ng-show="editView">
+					<div class="editTitle"> Edit</div>
+					<div class="editInputContainer">
+						<div class="input il">
+							<div>
+								<span>Allergic to:</span><input type="text" ng-model="editName" placeholder="Ex: Peanuts">
+							</div></br>
+							<div>
+								<span>Reaction</span><input ng-model="editReaction" placeholder="Ex: Lack of breath">
+							</div> 
+						</div>
+						<div class="buttonContainer">
+								<button class="il button" ng-click="saveEditAllergy()">Save</button>
+								<button class="il button" ng-click="cancelEditAllergy()">Cancel</button>
+						</div>
+					</div>
+		</div>
+
+		<div class="list" ng-repeat="allergy in Allergieslist">
+			<div class="il image"></div>
+			<div class="il info">
+				<div class="trashIcon" ng-click="del($index)"></div>
+				<div class="editIcon" ng-click="edit($index, allergy)"></div>
+				<div class="allergyName">Allergy: {{allergy.name}}</div>
+				<div class="allergyReaction">Reaction: {{allergy.reaction}}</div>
+			</div>
+		</div>
+	</div> 
+</div>

@@ -1,0 +1,18 @@
+<div class="custAccContainer">
+	<div class="custAccPageTittle">Account</div>
+	<div class="il input">
+		<span>Name</span><input type="text" ng-model="newBabyName">
+	</div>
+	<div class="buttonContainer il">
+		<button class="button"ng-click="saveNewBaby()">Save</button>
+	</div>
+
+	<div class="custAccListContainer">
+		
+		<div class="list" ng-repeat="baby in Babylist">
+			<div class="il image"></div>
+			<div class="babyName">{{baby.name}}</div>
+			<div class="trashIcon" ng-click="del($index)"></div>
+		</div>
+	</div>
+</div>

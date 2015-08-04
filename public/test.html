@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app="nannySync">
+  <head>
+    <title>Nanny Sync</title>
+    <meta name=viewport content="width=device-width, initial-scale=1">
+    <link href='http://fonts.googleapis.com/css?family=Montserrat+Alternates:400,700|Fredoka+One' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Elsie+Swash+Caps:900' rel='stylesheet' type='text/css'>
+   	<link rel="stylesheet" href="main.css">
+  </head>
+  <body> 
+ 
+
+  <div class="container" ng-controller="PageController">
+    <div class="accountBox"><a href="#custAcc"><img src="Assets/gear.jpeg"></a></div>
+  	<div class="header">
+  		<div class="companyName"><a href="#landing" style="text-decoration:none;color: rgba(68, 197, 179, .9);">Nanny Sync</a></div>
+  	</div>
+  	
+      <div ng-view></div>
+    
+    <div class="footer">
+      <div class="contact">
+        <p>Claudia Calzadillas</p></br>
+        <p>cdat2011@hotmail.com</p></br>
+        <p>@claudia_1201</p>
+      </div>
+    </div>
+  </div>
+
+    <script src="libs/moment.js"></script>
+    <!--<script src="libs/underscore.js"></script>-->
+  	<script src="libs/angular.js"></script>
+    <script src="libs/angular-route.js"></script>
+
+    <script src="custAccCtrl.js"></script>
+    <script src="pageCtrl.js"></script>
+    <script src="feedingCtrl.js"></script>
+    <script src="solidsCtrl.js"></script>
+    <script src="sleepCtrl.js"></script>
+    <script src="medicationCtrl.js"></script>
+    <script src="allergiesCtrl.js"></script>
+    <script src="appointmentsCtrl.js"></script>
+    <script src="index.js"></script>
+
+  </body>
+</html>

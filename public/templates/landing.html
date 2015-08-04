@@ -1,0 +1,61 @@
+<div class="body">
+  		<div class="babyDropdown">
+        <div class="il nameDropdown"> Name:</div> 
+        <div class="il dropdown">
+          <select id="dropdownList" 
+            ng-model="childSelection" 
+            ng-options="child.name for child in childrenList"
+            ng-change="selectedChild(childSelection)">
+          </select>
+        </div> 
+      </div>
+  		<div class="squares">
+
+  			<div class="il landing feeding">
+          <a href="#feeding">
+            <span>Feeding</span>
+            <div class="picture"></div>
+          </a>
+        </div>
+
+  			<div class="il landing solids">
+          <a href="#solids">
+            <span>Solids</span>
+            <div class="picture"></div>
+          </a>
+        </div>
+
+  			<div class="il landing sleep">
+          <a href="#sleep"> 
+            <span>Naps</span>
+            <div class="picture"></div>
+          </a>
+        </div>
+
+  			<div class="il landing medication">
+          <a href="#medication">
+             <span>Medication</span>
+            <div class="picture"></div>
+          </a>
+        </div>
+
+  			<div class="il landing allergies">
+          <a href="#allergies">
+            <span>Allergies</span>
+            <div class="picture"></div>
+          </a>
+        </div>
+
+  			<div class="il landing appointments">
+          <a href="#appointments">
+            <span>appointments</span>
+            <div class="picture"></div>
+          </a>
+        </div>
+
+  		</div>
+  		<!--<div class="info">
+  			<div class="notes"></div>
+  			<div class="latelyUpcoming"></div>
+  		</div>-->
+</div>

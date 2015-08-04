@@ -1,0 +1,575 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+/*font-family: 'Montserrat Alternates', sans-serif;*/
+/*font-family: 'Fredoka One', cursive;*/
+.container{
+	height: 100vh;
+	width: 100vw;
+	font-size:0;
+}
+.il{
+	display: inline-block;
+}
+.header{
+	height: 20%;
+	text-align: center;
+	& .companyName{
+		height: 100%;
+		font-size: 6vw;
+		font-family: 'Fredoka One', cursive;
+		line-height: 1;
+		position: relative;
+   		padding: 4vh;
+    	text-align: center;
+    	letter-spacing: .5vw;
+    	color: rgba(68, 197, 179, .9);
+    	-webkit-background-clip: text;
+    	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black, 7px 4px 3px rgba(0,0,0,0.3);
+    	background-image: url(Assets/pattern.jpg);
+
+    	/*text-shadow: 7px 4px 3px rgba(0,0,0,0.3);
+    	text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+    	text-shadow: 6px 6px 0px rgba(0,0,0,0.2);
+    	text-shadow: 4px 3px 0px #fff, 9px 8px 0px rgba(0,0,0,0.15);*/
+        /*-webkit-text-fill-color: transparent;*/
+
+		/*text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+		text-shadow: 5px 5px 0px #eee, 7px 7px 0px #707070;
+		font-weight: 700;
+		letter-spacing: 1vw;
+		text-transform: uppercase;*/
+		
+
+	}
+	& .companyName:before,
+      .companyName:after {
+	    position: absolute;
+	    content: '';
+	}
+	& .companyName:before {
+	    z-index: -2;
+	    top: 0;
+	    right: 0;
+	    bottom: 0;
+	    left: 0;
+	    background-image: inherit;
+
+	}
+
+	& .companyName:after {
+		height: 65%;
+	    position: absolute;
+	    z-index: -1;
+	    top: 15%;
+	    right: 20%;
+	    left: 20%;
+	    /*background: #25D3A9 linear-gradient(to right,rgba(60, 197, 186, 0.96) 0,rgba(52, 166, 211, 0.96) 100%);*/
+	    background: linear-gradient(45deg, rgba(255,255,255,.6) 0%,rgba(246,246,246,.6) 47%,rgba(237,237,237,.6) 100%);
+    	border-radius: 15px;
+
+		  -webkit-box-shadow: 0 15px 10px #777;
+		  -moz-box-shadow: 0 15px 10px #777;
+		  box-shadow: 0 15px 10px #777;
+		  -webkit-transform: rotate(-2deg);
+		  -moz-transform: rotate(-2deg);
+		  -o-transform: rotate(-2deg);
+		  -ms-transform: rotate(-2deg);
+		  transform: rotate(-2deg);
+
+	}
+	& .companyName--no-textzone:before {
+    	background-position: -.25em 0;
+	}
+
+	& .companyName--no-textzone:after {
+    	content: none;
+	}
+	& .companyName--cover,
+	.companyName--cover:before {
+    	background-repeat: no-repeat;
+        -webkit-background-size: cover;
+                background-size: cover;
+	}
+}
+.accountBox{
+	position: absolute;
+	top:0;	
+	  z-index: 1;
+}
+.accountBox img{
+	height: 20%;
+	width: 20%;
+	margin: 2%;
+}
+.body{
+	width: 100%;
+}
+.babyDropdown{
+	height: 10%;	
+	min-width: 20%;
+	padding: 2%;
+	font-family:'Fredoka One', cursive;;
+		& .nameDropdown{
+			height: 100%;
+			font-size: 1.9vw;
+			letter-spacing: 1px;
+			color: rgba(68, 197, 179, .9);	
+			text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;/*, 7px 4px 3px rgba(0,0,0,0.3)*/
+		}
+		& .dropdown {
+			height: 100%;
+			font-size: 1.9vw;
+			vertical-align: top;
+			margin-left: 2vw;
+		}
+
+}	
+.option{
+	height: 100%;
+	font-size: 2.9vw;
+	font-family: 'Montserrat Alternates', sans-serif;
+}
+/*LANDING PAGE*/
+.squares{
+	width: 100%;
+	font-size: 0;
+	//margin-top: 1%;
+	//padding: 0 10% 0 10%;
+	/*& div{
+		width: 30%;
+		height: 50%;
+		vertical-align: top;
+		 background-repeat: no-repeat;
+        -webkit-background-size: cover;
+                background-size: cover;
+                line-height: 1;
+	}*/
+	& .landing {
+		width: 33.333%; 
+		vertical-align: top;
+		transition:all 0.3s ease;
+		/*border:2px solid #ccc;
+    	border-bottom:3px solid #bbb;
+    	border-top:2px solid #ddd;*/
+    
+		& .picture{
+		 height: 28vh;
+		 vertical-align: top;
+		 background-repeat: no-repeat;
+        -webkit-background-size: 100% 100%;
+                background-size: 100% 100%;
+                line-height: 1;
+		}
+	}
+
+	& .landing:hover{
+	
+        -webkit-transform: scale(0.8);
+        -ms-transform: scale(0.8);
+        transform: scale(0.8);
+	    & .picture {
+    		-webkit-filter: blur(10px);
+    		position: relative;
+    	}
+		& span{
+			height: 50%;
+		    overflow: auto;
+		    margin: auto;
+  			top: 0; left: 0; bottom: 0; right: 0;
+			position: absolute;
+			z-index: 1;
+	    	padding: 8% 10%;
+	    	border-radius: 1vw;
+			font-size: 3vw;
+			text-align: center;
+			background-color:  rgba(68, 197, 179, .5);
+			font-family: 'Montserrat Alternates', sans-serif;
+			text-decoration: none;
+			color: black;
+			transition: all .5s ease;
+			/*background-color: rgba(249, 73, 138, 0.2);*/
+		}
+	}
+
+	& .feeding{
+		& .picture{
+		 background-image: url(Assets/piglet3.png);
+		}
+	}
+	& .solids{
+		& .picture{
+		 background-image: url(Assets/teddybear3.png);
+		}
+	}
+	& .sleep{
+		& .picture{
+		 background-image: url(Assets/owl3.png);
+		}
+	}
+	& .medication{
+		& .picture{
+		background-image: url(Assets/penguin3.png);
+		}
+	}
+	& .allergies{
+		& .picture{
+		background-image: url(Assets/panda3.png);
+		}
+	}
+	& .appointments{
+		& .picture{
+		 background-image: url(Assets/turtle3.png);
+		}
+		
+	}
+}
+
+/*shared views*/
+.nameTitle{
+	margin: 3% 20%;
+	text-shadow:  1px  1px 2px black,
+    1px -1px 2px black,
+   -1px  1px 2px black,
+   -1px -1px 2px black;
+   color: white;
+}
+.button{
+	font-size: 2vw;
+	padding: 15%;
+	border-radius: 5px;
+	border-top: 2px solid rgb(98, 203, 189);
+	border-right:  2px solid rgb(9, 135, 118);
+	border-bottom:  2px solid rgb(9, 135, 118);
+	border-left:  2px solid rgb(98, 203, 189);
+	background-color: rgba(68, 197, 179, .5);
+	font-weight: bold;	
+	color: white;
+	text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.button:hover{
+	cursor: pointer;
+}
+.buttonContainer{
+	margin-left: 9%;
+	vertical-align: top;
+}
+& .inputContainer{
+		margin-bottom: 5%;
+		margin-left: 9%;
+		& .input{
+			font-size: 2.5vw;
+			margin-left: 20%;
+		}
+}
+& .list{
+		border-bottom: 1px solid black;
+		margin-bottom: 2%;
+		position: relative;
+		& .image{
+			background-size: 100% 100%;
+			height: 7vh;
+			width: 6vw;
+			margin: 0 4% 1% 0;
+		}
+
+		& .trashIcon{
+				background-image: url(Assets/iconTrash.png);
+				background-size: 100% 100%;
+				height: 7vh;
+				width: 4vw;
+				position: absolute;
+  				left: 52vw;
+  				top: 0;
+		}
+		& .trashIcon:hover{
+			cursor: pointer;
+		}
+		& .editIcon{
+				background-image: url(Assets/editIcon.png);
+				background-size: 100% 100%;
+				height: 7vh;
+				width: 3.5vw;
+				position: absolute;
+  				left: 52.5vw;
+  				bottom: 0;
+		}
+		& .editIcon:hover{
+			cursor: pointer;
+		}
+		& .info{
+			font-size: 2vw;
+			padding-bottom: 2%;
+		}
+}
+.infoSelection{
+		margin-left: 50%;
+		margin-bottom: 5%;
+		font-size: 2vw;
+		& span{
+			margin-right: 1vw;
+			text-decoration: underline;
+		}
+		& span:hover{
+			cursor: pointer;
+		}
+}
+.selectPH{
+	color: gray;
+}
+.editableView{
+	position: absolute;
+	z-index: 1;
+	left: 30vw;
+	border: 1px solid black;
+	border-radius: 5px;
+	background-color: rgba(255, 255, 255, 1);
+	text-align: center;
+	padding: 1%;
+	& .editTitle{
+		text-shadow:  1px  1px 2px black, 1px -1px 2px black, -1px  1px 2px black, -1px -1px 2px black;
+		color: rgb(255,231,122);
+	}
+	& .buttonContainer{
+		margin-left: 0;
+		margin-top: 3%;
+		vertical-align: none;
+		& button{
+			padding: 2%;
+		}
+	}
+}
+/*Add baby page*/
+.custAccContainer{
+	font-family: 'Fredoka One', cursive;
+	& .custAccPageTittle{
+		font-size: 4vw;
+		text-align: center;
+		text-shadow:  1px  1px 2px black, 1px -1px 2px black, -1px  1px 2px black, -1px -1px 2px black;
+		color: rgb(255,231,122);
+	}
+	& .input{
+			font-size: 2.5vw;
+			margin-left: 30%;
+			margin-top: 3%;
+	}
+	& .buttonContainer{
+		margin-top: 3%;
+		margin-bottom: 3%;
+	}	
+}
+.custAccListContainer{
+	font-size: 3vw;
+	margin: 0 20%;
+	text-align: center;
+	& .image{
+			background-image: url(Assets/babyIcon.jpg);
+		}
+}
+/*FEEDING PAGE*/
+.feedingContainer{
+	font-family: 'Fredoka One', cursive;
+	font-size: 2.5vw;
+	& .feedingPageTittle{
+		font-size: 4vw;
+		text-align: center;
+		text-shadow:  1px  1px 2px black, 1px -1px 2px black, -1px  1px 2px black, -1px -1px 2px black;
+		color: rgb(255,231,122);
+	}	
+	& .amount{
+		margin-left: 2%;
+		margin-right: 2%;
+		width: 20%;
+		font-size: 1.5vw;
+	}
+	& .saveButtonFeeding{
+		margin-top: 25%;
+	}
+}
+.feedingListContainer{
+	margin: 0 20%;
+	& .image{
+		background-image: url(Assets/bottleFeddingView.jpeg);
+	}
+}
+.input div{
+	display: inline-block;
+}
+/* Solids View*/
+.solidsContainer{
+	font-family: 'Fredoka One', cursive;
+	font-size: 2.5vw;
+	& .solidsPageTittle{
+		font-size: 4vw;
+		text-align: center;
+		text-shadow:  1px  1px 2px black, 1px -1px 2px black, -1px  1px 2px black, -1px -1px 2px black;
+		color: rgb(255,231,122);
+	}
+}
+.solidsListContainer{
+	margin: 0 20%;
+	& .image{
+			background-image: url(Assets/bowlSolidsView.gif);
+	}
+}
+/* Sleep View*/
+.sleepContainer{
+	font-family: 'Fredoka One', cursive;
+	font-size: 2.5vw;
+	& .sleepPageTittle{
+		font-size: 4vw;
+		text-align: center;
+		text-shadow:  1px  1px 2px black, 1px -1px 2px black, -1px  1px 2px black, -1px -1px 2px black;
+		color: rgb(255,231,122);
+	}
+}
+.sleepListContainer{
+	margin: 0 20%;
+	& .image{
+			background-image: url(Assets/sleepIcon1SleepView.png);
+		}
+}
+/*medication view*/
+.medicationContainer{
+	font-family: 'Fredoka One', cursive;
+	font-size: 2.5vw;
+	& .medicationPageTittle{
+		font-size: 4vw;
+		text-align: center;
+		text-shadow:  1px  1px 2px black, 1px -1px 2px black, -1px  1px 2px black, -1px -1px 2px black;
+		color: rgb(255,231,122);
+	}
+}
+.medicationListContainer{
+	margin: 0 20%;
+	& .image{
+			background-image: url(Assets/MedIconMedView.png);
+		}
+}
+/*allergies view*/
+.allergiesContainer{
+	font-family: 'Fredoka One', cursive;
+	font-size: 2.5vw;
+	& .allergiesPageTittle{
+		font-size: 4vw;
+		text-align: center;
+		text-shadow:  1px  1px 2px black, 1px -1px 2px black, -1px  1px 2px black, -1px -1px 2px black;
+		color: rgb(255,231,122);
+	}
+}
+.allergiesListContainer{
+	margin: 0 20%;
+	& .image{
+			background-image: url(Assets/allergyIconAllergyView.jpeg);
+		}
+}
+/*appointments view*/
+.appointmentsContainer{
+	font-family: 'Fredoka One', cursive;
+	font-size: 2.5vw;
+	& .appointmentsPageTittle{
+		font-size: 4vw;
+		text-align: center;
+		text-shadow:  1px  1px 2px black, 1px -1px 2px black, -1px  1px 2px black, -1px -1px 2px black;
+		color: rgb(255,231,122);
+	}
+}
+.appointmentListContainer{
+	margin: 0 20%;
+	& .image{
+			background-image: url(Assets/apptIconApptView.jpeg);
+		}
+}
+/*GENREAL FOOTER*/
+.footer{
+	height: 10%;
+	/*background: #25D3A9 linear-gradient(to right,rgba(60, 197, 186, 0.96) 0,rgba(52, 166, 211, 0.96) 100%);*/
+	 background-image: url(Assets/pattern.jpg);
+	 font-size: 1vw;
+   		font-weight: bold;
+   		font-family: 'Fredoka One', cursive;
+   		letter-spacing: 1px;
+   		& .contact{
+   			padding: 2%;
+   			& p {
+   			line-height: 1.5vh; 
+   			}
+   		}
+}
+
+@media only screen and (min-width:960px){
+/* styles for browsers larger than 960px; */
+
+   .body{
+   		padding: 1% 5%;	
+   }
+   .squares{
+   		padding: 0 5.5% 0 5.5%;
+   		& .landing{
+   			& .picture{
+   				height: 30vh;
+   			}	
+   		}
+   		& .appointments:hover{
+			& span{
+	    		padding: 5% 1%;
+	    		font-size: 2.5vw;
+			}
+		}
+   }
+   & .list{
+		& .image{
+			height: 13vh;
+			width: 10vw;
+			margin-right: 6%;
+		}
+	}
+   
+   .footer{
+   		height: 15%;	
+   }
+
+}
+@media only screen and (min-width:1440px){
+/* styles for browsers larger than 1440px; */
+
+}
+@media only screen and (min-width:2000px){
+    /* for sumo sized (mac) screens */
+}
+@media only screen and (max-device-width:480px){
+	/* styles for mobile browsers smaller than 480px; (iPhone) */
+	.header{
+		height: 15%;
+	}
+	.body{
+		margin- bottom: 5%;
+	}
+	.squares{
+		padding: 1%;
+
+		& .landing{
+			width: 50%;
+			& .picture{
+				height: 25vh;
+			}
+		}
+		.footer{
+			height: 10%;
+		}
+	}
+}
+@media only screen and (device-width:768px){
+   /* default iPad screens */
+}
+/* different techniques for iPad screening */
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:portrait) {
+  /* For portrait layouts only */
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape) {
+  /* For landscape layouts only */
+}
+

@@ -1,0 +1,104 @@
+<div class="medicationContainer">
+	<div class="medicationPageTittle">Medication</div>
+	<div  class="nameTitle" ng-bind="nameTitle"></div>
+	<div class="inputContainer">
+		<div class="input il">
+			<div>
+				<span>Name:</span><input ng-model="name" placeholder="Ex: Ibuprofen">
+			</div> </br>
+			<div>
+				<span>Dosage:</span>
+					<select ng-model="amount">
+					<option class="selectPH" value='' disabled selected style='display:none;'>Qty</option>
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+				   </select> 
+				 <select ng-model="form">
+				 	<option class="selectPH" value='' disabled selected style='display:none;'>Measurement</option>
+					<option>pill(s)</option>
+					<option>mg</option>
+					<option>ml</option>
+					<option>Tsp</option>
+				 </select> </br>
+				 <span>Every</span>
+				   <select ng-model="interval">
+				   	<option class="selectPH" value='' disabled selected style='display:none;'>Number</option>
+					<option>1</option>
+					<option>2</option>
+					<option>3</option>
+					<option>4</option>
+					<option>6</option>
+					<option>7</option>
+					<option>8</option>
+					<option>12</option>
+				   </select> 
+				   <select ng-model="duration">
+				   	<option class="selectPH" value='' disabled selected style='display:none;'>Interval</option>
+				   	<option>hour(s)</option>
+				   	<option>day(s)</option>
+				   	<option>week(s)</option>
+				   </select>
+			</div>
+		</div>
+		<div class="buttonContainer il"> 
+			<button class="button saveButtonMed" ng-click="saveNewMed()">Save</button>
+		</div>
+	</div>
+	<div class="medicationListContainer">
+		<div class="editableView" ng-show="editView">
+					<div class="editTitle"> Edit</div>
+					<div class="editInputContainer">
+						<div class="input il">
+							<div>
+								<span>Name:</span><input ng-model="editName" placeholder="Ex: Ibuprofen">
+							</div> </br>
+							<div>
+								<span>Dosage:</span>
+									<select ng-model="editAmount">
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+								   </select> 
+								 <select ng-model="editForm">
+									<option>pill(s)</option>
+									<option>mg</option>
+									<option>ml</option>
+									<option>Tsp</option>
+								 </select> </br>
+								 <span>Every</span>
+								   <select ng-model="editInterval">
+									<option>1</option>
+									<option>2</option>
+									<option>3</option>
+									<option>4</option>
+									<option>6</option>
+									<option>7</option>
+									<option>8</option>
+									<option>12</option>
+								   </select> 
+								   <select ng-model="editDuration">
+								   	<option>hour(s)</option>
+								   	<option>day(s)</option>
+								   	<option>week(s)</option>
+								   </select>
+							</div>
+						</div>
+						<div class="buttonContainer">
+								<button class="il button" ng-click="saveEditMedication()">Save</button>
+								<button class="il button" ng-click="cancelEditMedication()">Cancel</button>
+						</div>
+					</div>
+		</div>
+
+		<div class="list" ng-repeat="med in Medlist">
+			<div class="il image"></div>
+			<div class="il info">
+				<div class="trashIcon" ng-click="del($index)"></div>
+				<div class="editIcon" ng-click="edit($index, med)"></div>
+				<div class="oneMedName">{{med.name}}</div>
+				<div class="oneMedDosage">{{med.dosage}}</div>
+			</div>
+		</div>
+	</div>
+</div>
