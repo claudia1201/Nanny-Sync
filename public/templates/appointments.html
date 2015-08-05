@@ -9,6 +9,7 @@
 			<div>
 				<span>Date</span>
 				<select ng-model="month">
+					<option class="selectPH" value='' disabled selected style='display:none;'>Month</option>
 					<option>January (1)</option>
 					<option>February (2)</option>
 					<option>March (3)</option>
@@ -23,6 +24,7 @@
 					<option>December (12)</option>
 				</select>
 				<select ng-model="day">
+					<option class="selectPH" value='' disabled selected style='display:none;'>Day</option>
 					<option>1</option>
 					<option>2</option>
 					<option>3</option>
@@ -56,6 +58,7 @@
 					<option>31</option>
 				</select>
 				<select ng-model="year">
+					<option class="selectPH" value='' disabled selected style='display:none;'>Year</option>
 					<option>2015</option>
 					<option>2016</option>
 				</select>
@@ -64,6 +67,7 @@
 				<span>Time: </span>
 					<div class="il">
 						<select ng-model="hour">
+							<option class="selectPH" value='' disabled selected style='display:none;'>Hour</option>
 							<option>01</option>
 							<option>02</option>
 							<option>03</option>
@@ -79,6 +83,7 @@
 						</select>
 						<span> : </span>
 						<select ng-model="minute">
+							<option class="selectPH" value='' disabled selected style='display:none;'>Minute</option>
 							<option>00</option>
 							<option>01</option>
 							<option>02</option>
@@ -142,6 +147,7 @@
 							<option>60</option>
 						</select>
 						<select ng-model="time">
+							<option class="selectPH" value='' disabled selected style='display:none'>AM/PM</option>
 							<option>AM</option>
 							<option>PM</option>
 						</select>
