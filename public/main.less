@@ -560,6 +560,67 @@
 			height: 10%;
 		}
 	}
+	& .list{
+		border-bottom: 1px solid black;
+		margin-bottom: 2%;
+		position: relative;
+		& .image{
+			background-size: 100% 100%;
+			height: 10vh;
+			width: 11.5vw;
+			margin: 0 5% 1% 0;
+		}
+
+		& .trashIcon{
+				background-image: url(Assets/iconTrash.png);
+				background-size: 100% 100%;
+				height: 5vh;
+				width: 4vw;
+				position: absolute;
+  				left: 75vw;
+  				top: 0;
+		}
+		& .trashIcon:hover{
+			cursor: pointer;
+		}
+		& .editIcon{
+				background-image: url(Assets/editIcon.png);
+				background-size: 100% 100%;
+				height: 5vh;
+				width: 4vw;
+				position: absolute;
+  				left: 75vw;
+  				bottom: 0;
+		}
+		& .editIcon:hover{
+			cursor: pointer;
+		}
+		& .info{
+			font-size: 4vw;
+			padding-bottom: 2%;
+		}
+	}
+	.feedingListContainer{
+		margin: 0 10%;
+	}
+	.solidsListContainer{
+		margin: 0 10%;
+	}
+	.sleepListContainer{
+		margin: 0 10%;
+	}
+	.medicationListContainer{
+		margin: 0 10%;
+	}
+	.allergiesListContainer{
+		margin: 0 10%;
+	}
+	.appointmentListContainer{
+		margin: 0 10%;
+	}
+	.footer{
+		font-size: 2vw;
+	}
 }
 @media only screen and (device-width:768px){
    /* default iPad screens */
