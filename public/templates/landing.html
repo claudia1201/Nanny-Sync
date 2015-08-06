@@ -6,6 +6,7 @@
             ng-model="childSelection" 
             ng-options="child.name for child in childrenList"
             ng-change="selectedChild(childSelection)">
+            <option class="selectPH" value='' disabled selected style='display:none;'>Choose Name</option>
           </select>
         </div> 
       </div>
