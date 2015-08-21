@@ -3,9 +3,11 @@ angular.module("feedingCtrl", [])
 .controller("FeedingController", function($scope, $http){ 
   $scope.nameTitle = $scope.childSelection.name+ ":"
   $scope.infoView= false
+  /*
+  Harcoded entry
   $scope.hour = "06"
   $scope.minute = "00"
-  $scope.time = "PM"
+  $scope.time = "PM"*/
   /*Update feeding View*/
   var updateFeedingView = function(){
     $http.get("https://childcare-data-service.herokuapp.com/child/"+ $scope.childSelection.id + "/feeding")
